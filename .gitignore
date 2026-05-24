@@ -1,0 +1,33 @@
+# Swift / Xcode
+.build/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+.swiftpm/
+Package.resolved
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local config
+.claude/
+
+# Secrets
+.env
+*.secret
+secrets/

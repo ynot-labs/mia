@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia MVP Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-blob"></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-logo">Mia</span>
+        <span class="brand-name">MVP Test</span>
+      </div>
+
+      <div class="section">
+        <h3>目标语言</h3>
+        <select id="target-language"></select>
+      </div>
+
+      <div class="section">
+        <h3>语音</h3>
+        <select id="voice"></select>
+      </div>
+
+      <div class="section">
+        <h3>设置</h3>
+        <label class="checkbox">
+          <input type="checkbox" id="lang-id" checked>
+          语言识别
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="tts" checked>
+          播放翻译语音
+        </label>
+      </div>
+
+      <div class="sidebar-footer">
+        <span id="status" class="status">就绪</span>
+        <button id="action" class="action-btn" data-state="idle">
+          <span class="btn-label">开始说话</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="error-banner" style="display:none;"></div>
+      <section class="column">
+        <h2>原文</h2>
+        <div id="original" class="transcript"></div>
+      </section>
+      <section class="column">
+        <h2>翻译</h2>
+        <div id="translation" class="transcript"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
